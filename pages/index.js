@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Card from '../components/Card'
+import { BiArrowToRight } from 'react-icons/bi'
 
 
 export default function Home({ upcomingMovies, nowPlaying }) {
@@ -12,8 +13,17 @@ export default function Home({ upcomingMovies, nowPlaying }) {
 
       </Head>
       <div className='flex flex-col p-10 '>
+        <div className='flex justify-between items-center '>
+          <h1 className='text-2xl text-white p-2'>Upcoming Movies</h1>
+          <div className='text-2xl text-[#d85c27] p-2 font-semibold flex items-center gap-1'>
+            SLIDE
+            <span>
+              <BiArrowToRight className='h-12 w-12 ' />
+            </span>
+          </div>
+        </div>
 
-        <h1 className='text-2xl text-white p-2'>Upcoming Movies</h1>
+
         <div className='flex overflow-x-auto scrollbar-hide whitespace-nowrap scroll-smooth'>
           {upcomingMovies.map((upcomingMovie) => {
             return (
@@ -29,8 +39,15 @@ export default function Home({ upcomingMovies, nowPlaying }) {
       </div>
       <div className='flex flex-col p-10 '>
 
-        <h1 className='text-2xl text-white p-2'>Now Playing Movies</h1>
-        <div className='flex overflow-x-auto scrollbar-hide whitespace-nowrap scroll-smooth'>
+        <div className='flex justify-between items-center '>
+          <h1 className='text-2xl text-white p-2'>Now Playing Movies</h1>
+          <div className='text-2xl text-[#d85c27] p-2 font-semibold flex items-center gap-1'>
+            SLIDE
+            <span>
+              <BiArrowToRight className='h-12 w-12 ' />
+            </span>
+          </div>
+        </div>        <div className='flex overflow-x-auto scrollbar-hide whitespace-nowrap scroll-smooth'>
           {nowPlaying.map((nowPlayingMovie) => {
             return (
               <Card

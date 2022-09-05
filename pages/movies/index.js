@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import Card from '../../components/Card'
+import { BiArrowToRight } from 'react-icons/bi'
 
 const Movies = ({ popularMovies, trendingMovies, topRatedMovies }) => {
     return (
@@ -14,8 +15,15 @@ const Movies = ({ popularMovies, trendingMovies, topRatedMovies }) => {
 
             <div className='flex flex-col p-10 '>
 
-                <h1 className='text-2xl text-white p-2'>Popular Movies</h1>
-                <div className='flex overflow-x-auto scrollbar-hide whitespace-pre scroll-smooth'>
+                <div className='flex justify-between items-center '>
+                    <h1 className='text-2xl text-white p-2'>Popular Movies</h1>
+                    <div className='text-2xl text-[#d85c27] p-2 font-semibold flex items-center gap-1'>
+                        SLIDE
+                        <span>
+                            <BiArrowToRight className='h-12 w-12 ' />
+                        </span>
+                    </div>
+                </div>                <div className='flex overflow-x-auto scrollbar-hide whitespace-pre scroll-smooth'>
 
                     {popularMovies.map((popularMovie) => {
                         return (
@@ -33,8 +41,15 @@ const Movies = ({ popularMovies, trendingMovies, topRatedMovies }) => {
                 </div>
             </div>
             <div className='flex flex-col p-10'>
-                <h1 className='text-2xl text-white p-2'>Trending Movies</h1>
-                <div className='flex overflow-x-auto scrollbar-hide whitespace-nowrap scroll-smooth'>
+                <div className='flex justify-between items-center '>
+                    <h1 className='text-2xl text-white p-2'>Trending Movies</h1>
+                    <div className='text-2xl text-[#d85c27] p-2 font-semibold flex items-center gap-1'>
+                        SLIDE
+                        <span>
+                            <BiArrowToRight className='h-12 w-12 ' />
+                        </span>
+                    </div>
+                </div>                <div className='flex overflow-x-auto scrollbar-hide whitespace-nowrap scroll-smooth'>
                     {trendingMovies.map((trendingMovie) => {
                         return (
                             <Card
@@ -49,8 +64,15 @@ const Movies = ({ popularMovies, trendingMovies, topRatedMovies }) => {
                 </div>
             </div>
             <div className='flex flex-col p-10'>
-                <h1 className='text-2xl text-white p-2'>Top Rated Movies</h1>
-                <div className='flex overflow-x-auto scrollbar-hide whitespace-nowrap scroll-smooth'>
+                <div className='flex justify-between items-center '>
+                    <h1 className='text-2xl text-white p-2'>Upcoming Movies</h1>
+                    <div className='text-2xl text-[#d85c27] p-2 font-semibold flex items-center gap-1'>
+                        SLIDE
+                        <span>
+                            <BiArrowToRight className='h-12 w-12 ' />
+                        </span>
+                    </div>
+                </div>                <div className='flex overflow-x-auto scrollbar-hide whitespace-nowrap scroll-smooth'>
                     {topRatedMovies.map((topRatedMovie) => {
                         return (
                             <Card

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import Card from '../../components/Card'
+import { BiArrowToRight } from 'react-icons/bi'
 
 const Movies = ({ popularTvShows, trendingTvShows, topRatedTvShows }) => {
     console.log(popularTvShows.id)
@@ -13,8 +14,15 @@ const Movies = ({ popularTvShows, trendingTvShows, topRatedTvShows }) => {
             </Head>
             <div className='flex flex-col p-10 '>
 
-                <h1 className='text-2xl text-white p-2'>Popular Tv Shows</h1>
-                <div className='flex overflow-x-auto scrollbar-hide whitespace-nowrap scroll-smooth'>
+                <div className='flex justify-between items-center '>
+                    <h1 className='text-2xl text-white p-2'>Popular Tv Shows</h1>
+                    <div className='text-2xl text-[#d85c27] p-2 font-semibold flex items-center gap-1'>
+                        SLIDE
+                        <span>
+                            <BiArrowToRight className='h-12 w-12 ' />
+                        </span>
+                    </div>
+                </div>                <div className='flex overflow-x-auto scrollbar-hide whitespace-nowrap scroll-smooth'>
                     {popularTvShows.map((popularTvShow) => {
                         return (
                             <Card
@@ -29,8 +37,15 @@ const Movies = ({ popularTvShows, trendingTvShows, topRatedTvShows }) => {
                 </div>
             </div>
             <div className='flex flex-col p-10'>
-                <h1 className='text-2xl text-white p-2'>Trending Tv Shows</h1>
-                <div className='flex overflow-x-auto scrollbar-hide whitespace-nowrap scroll-smooth'>
+                <div className='flex justify-between items-center '>
+                    <h1 className='text-2xl text-white p-2'>Trending Tv Shows</h1>
+                    <div className='text-2xl text-[#d85c27] p-2 font-semibold flex items-center gap-1'>
+                        SLIDE
+                        <span>
+                            <BiArrowToRight className='h-12 w-12 ' />
+                        </span>
+                    </div>
+                </div>                <div className='flex overflow-x-auto scrollbar-hide whitespace-nowrap scroll-smooth'>
                     {topRatedTvShows.map((topRatedTvShow) => {
                         return (
                             <Card
@@ -46,8 +61,15 @@ const Movies = ({ popularTvShows, trendingTvShows, topRatedTvShows }) => {
                 </div>
             </div>
             <div className='flex flex-col p-10'>
-                <h1 className='text-2xl text-white p-2'>Top Rated Tv Shows</h1>
-                <div className='flex overflow-x-auto scrollbar-hide whitespace-nowrap scroll-smooth'>
+                <div className='flex justify-between items-center '>
+                    <h1 className='text-2xl text-white p-2'>Top Rated Tv Shows</h1>
+                    <div className='text-2xl text-[#d85c27] p-2 font-semibold flex items-center gap-1'>
+                        SLIDE
+                        <span>
+                            <BiArrowToRight className='h-12 w-12 ' />
+                        </span>
+                    </div>
+                </div>                <div className='flex overflow-x-auto scrollbar-hide whitespace-nowrap scroll-smooth'>
                     {trendingTvShows.map((trendingTvShow) => {
                         return (
                             <Card
