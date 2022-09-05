@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from "next/head";
 import requestsMovie from "../../utils/requestsMovie";
-import Results from '../../components/results';
+import Results from '../../components/Results';
 import NavMovie from '../../components/NavMovie';
 import Pagination from '../../components/Pagination';
 

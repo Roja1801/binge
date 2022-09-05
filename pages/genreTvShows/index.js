@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from "next/head";
 import requestsTv from "../../utils/requestsTv";
-import Results from '../../components/results';
+import Results from '../../components/Results';
 import NavTv from '../../components/NavTv';
 import Pagination from '../../components/Pagination';
 

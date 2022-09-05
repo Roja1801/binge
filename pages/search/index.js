@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import { useRouter } from "next/router";
-import Thumbnail from '../../components/thumbnail';
+import Thumbnail from '../../components/Thumbnail';
 import Link from 'next/link';
 
 
