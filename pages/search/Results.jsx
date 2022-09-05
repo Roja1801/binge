@@ -11,7 +11,7 @@ const searchResults = ({ query, redirect, results }) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <h3 className="text-white text-center mb-5 font-semibold md:text-xl md:font-bold px-5 md:px-10 lg:px-20 xl:px-36 pt-5">
-                Search results for "{query}"
+                Search results for `{query}`
             </h3>
             <div className="flex flex-wrap justify-center gap-5 text-center ">
                 {results?.map((result) => (

@@ -21,6 +21,7 @@ export default function Home({ upcomingMovies, nowPlaying }) {
                 id={upcomingMovie.id}
                 data={upcomingMovie}
                 redirect="movie"
+                key={upcomingMovie.id}
               />
             )
           })}
@@ -36,6 +37,8 @@ export default function Home({ upcomingMovies, nowPlaying }) {
                 id={nowPlayingMovie.id}
                 data={nowPlayingMovie}
                 redirect="movie"
+                key={nowPlayingMovie.id}
+
               />
             )
           })}

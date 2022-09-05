@@ -23,6 +23,8 @@ const Movies = ({ popularMovies, trendingMovies, topRatedMovies }) => {
                                 id={popularMovie.id}
                                 redirect="movie"
                                 data={popularMovie}
+                                key={popularMovie.id}
+
                             />
 
                         )
@@ -39,6 +41,8 @@ const Movies = ({ popularMovies, trendingMovies, topRatedMovies }) => {
                                 id={trendingMovie.id}
                                 redirect="movie"
                                 data={trendingMovie}
+                                key={trendingMovie.id}
+
                             />
                         )
                     })}
@@ -53,6 +57,8 @@ const Movies = ({ popularMovies, trendingMovies, topRatedMovies }) => {
                                 id={topRatedMovie.id}
                                 redirect="movie"
                                 data={topRatedMovie}
+                                key={topRatedMovie.id}
+
                             />
 
                         )
