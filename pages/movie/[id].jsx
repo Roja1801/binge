@@ -96,6 +96,8 @@ const Movie = ({ movie, moreMovies }) => {
                                 id={moreMovie.id}
                                 redirect="movie"
                                 data={moreMovie}
+                                key={moreMovie.id}
+
                             />
                         )
                     })}
