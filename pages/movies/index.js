@@ -65,7 +65,7 @@ const Movies = ({ popularMovies, trendingMovies, topRatedMovies }) => {
             </div>
             <div className='flex flex-col p-10'>
                 <div className='flex justify-between items-center '>
-                    <h1 className='text-2xl text-white p-2'>Upcoming Movies</h1>
+                    <h1 className='text-2xl text-white p-2'>Top Rated Movies</h1>
                     <div className='text-2xl text-[#d85c27] p-2 font-semibold flex items-center gap-1'>
                         SLIDE
                         <span>
