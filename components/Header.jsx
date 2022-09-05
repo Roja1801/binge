@@ -3,7 +3,6 @@ import { BiCameraMovie } from 'react-icons/bi'
 import Link from 'next/link'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { useRouter } from 'next/router'
-import { AiOutlineClose } from 'react-icons/ai'
 import { RiArrowDropDownLine } from 'react-icons/ri'
 import { BsSearch } from 'react-icons/bs'
 
@@ -13,10 +12,10 @@ const Header = () => {
     const [drop, setDrop] = useState(false)
 
     return (
-        <div className='p-3 px-10 flex justify-between md:flex md:justify-between md:items-center sticky top-0 z-30 bg-[#132e4c]'>
-            <div className='flex flex-col text-white '>
-                <BiCameraMovie className='h-14 w-14 text-[#d85c27] cursor-pointer' />
-                <p className='font-mono text-xl'>BINGE</p>
+        <div className='p-3 py-0 px-10 flex justify-between md:flex md:justify-between md:items-center sticky top-0 z-30 bg-[#132e4c]'>
+            <div className='flex flex-col items-center text-white'>
+                <BiCameraMovie className='md:h-14 md:w-14 h-11 w-10  text-[#d85c27] cursor-pointer' />
+                <p className='font-mono lg:text-xl '>BINGE</p>
             </div>
 
             <div className='flex flex-row'>
@@ -60,9 +59,18 @@ const Header = () => {
                 </div>
 
                 <div className='flex flex-col justify-end items-end p-5 gap-7'>
-                    <GiHamburgerMenu className='md:hidden  h-12 w-12 text-[#d85c27] flex flex-col justify-between items-center' onClick={() => setShow(prev => !prev)} />
+                    <div className="z-50 flex relative w-8 h-8 flex-col justify-between items-center md:hidden" onClick={() => {
+                        setShow(!show)
+                    }}>
+                        {/* hamburger button */}
+                        <span className={`h-1 w-full bg-[#d85c27] rounded-lg transform transition duration-300 ease-in-out ${show ? "rotate-45 translate-y-3.5" : ""}`} />
+                        <span className={`h-1 w-full bg-[#d85c27] rounded-lg transition-all duration-300 ease-in-out ${show ? "w-0" : "w-full"}`} />
+                        <span className={`h-1 w-full bg-[#d85c27] rounded-lg transform transition duration-300 ease-in-out ${show ? "-rotate-45 -translate-y-3.5" : ""}`} />
+                    </div>
+                    {/* <GiHamburgerMenu className='md:hidden  md:h-12 md:w-12 h-10 w-10 text-[#d85c27] flex flex-col justify-between items-center' onClick={() => setShow(prev => !prev)} /> */}
                     {show &&
-                        <div className={`flex flex-col justify-start items-end p-5 border-t-2 border-b-2 w-[300%] transform ${show ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md  md:hidden`}>
+                        <div className="flex flex-col justify-start items-end p-5 border-t-2 border-b-2 w-[170%] md:hidden ">
+
 
                             <ul className='md:hidden flex flex-col gap-3 items-center justify-center'>
 
@@ -94,6 +102,7 @@ const Header = () => {
                                     </a>
                                 </li>
                             </ul>
+
                         </div>
                     }
 
